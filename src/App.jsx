@@ -10,6 +10,8 @@ function App() {
   console.log(users);
   console.log(loading);
 
+
+
   useEffect(() => {
     async function fetchUsers() {
       try {
@@ -30,6 +32,10 @@ function App() {
       fetchUsers();
   }, []);
 
+
+
+  const filteredUser = users.filter((user)=> user.name.toLowerCase().includes(searchQuery.toLowerCase()));
+
   if(loading){
 
      return <h1>loading users...</h1>
@@ -40,10 +46,8 @@ function App() {
      return <p>{error}</p>
   }
 
-  if(users.length === 0){
+ 
 
-     return <h1>no users found</h1>
-  }
 
   return (
     <>
@@ -54,12 +58,17 @@ function App() {
         id="search"
         placeholder="Search"
         value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
+        onChange={(e) => {
+
+            setSearchQuery(e.target.value);
+
+        }}
       ></input>
 
       <div>
+        
          <ul>
-          {users.map((user)=> (
+          {filteredUser.map((user)=> (
 
             <li key={user.id}>{user.name}</li>
           ))}
