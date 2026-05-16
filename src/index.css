@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  padding: 40px, 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.user-count {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #444;
+}
+
+.user-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.user-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+}
+
+.user-name {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.user-email,
+.user-username {
+  color: #666;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+.message {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.1rem;
+  color: #666;
+}
