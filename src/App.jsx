@@ -1,11 +1,22 @@
+import { useState } from "react";
 
-function App(){
+function App() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
+  return (
+    <>
+      <h1>User-Directory</h1>
 
-   return (
+      <input type="text" id="search" placeholder="Search"></input>
 
-     <h1>React User Directory</h1>
-   )
+      <div>
+        <p>users</p>
+      </div>
+    </>
+  );
 }
 
 export default App;
