@@ -1,16 +1,70 @@
-# React + Vite
+# React User Directory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that fetches users from an API and provides live search filtering functionality.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Fetch users from external API
+- Loading state handling
+- Error state handling
+- Empty search result handling
+- Live search filtering
+- Dynamic UI rendering
+- Responsive card-based layout
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- CSS
 
-## Expanding the ESLint configuration
+## API Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+https://jsonplaceholder.typicode.com/users
+
+## What I Learned
+
+This project helped me practice and understand:
+
+- useEffect lifecycle
+- Fetching API data in React
+- State management with useState
+- Controlled inputs
+- Derived state and filtering logic
+- Conditional rendering
+- Render flow and re-rendering
+- Handling loading, error, and empty UI states
+
+## Project Flow
+
+```txt
+Initial Render
+↓
+useEffect Runs
+↓
+Fetch Users
+↓
+Store Data in State
+↓
+Re-render Component
+↓
+Filter Users Based on Search Input
+↓
+Render Filtered Users
+```
+
+## Installation
+
+```bash
+npm install
+npm run dev
+```
+
+## Future Improvements
+
+- Component separation
+- Search by email or username
+- Better responsive design
+- Debounced search
+- Dark mode
